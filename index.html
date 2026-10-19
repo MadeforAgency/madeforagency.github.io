@@ -12,7 +12,7 @@
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 /* Layout: white paper, black type, the clients' published posts bring every colour on the page.
    Editorial grid, left aligned. Mono labels carry the meta. One full bleed strip of real work. */
@@ -22,7 +22,8 @@
   --mute:#6E6E73;
   --hair:#E3E3E6;
   --wash:#F4F4F5;
-  --display:"Archivo","Helvetica Neue",Helvetica,Arial,sans-serif;
+  --display:"Helvetica Neue",Helvetica,Arial,sans-serif;
+  --body:Inter,"Helvetica Neue",Helvetica,Arial,sans-serif;
   --gut:max(22px,env(safe-area-inset-left,0px));
   --max:1280px;
   color-scheme:light;
@@ -30,7 +31,7 @@
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 html,body{margin:0;background:var(--paper);color:var(--ink)}
-body{font-family:var(--display);font-variation-settings:"wdth" 100;-webkit-font-smoothing:antialiased;overflow-x:hidden;font-size:17px;line-height:1.5}
+body{font-family:var(--body);-webkit-font-smoothing:antialiased;overflow-x:hidden;font-size:17px;line-height:1.5}
 a{color:inherit;text-decoration:none}
 :focus-visible{outline:2px solid var(--ink);outline-offset:4px}
 img,svg{display:block}
@@ -41,7 +42,7 @@ img,svg{display:block}
 .ticker{background:var(--ink);color:var(--paper);overflow:hidden;height:36px;display:flex;align-items:center}
 .ticker .run{display:flex;width:max-content;animation:slide 40s linear infinite}
 .ticker span{white-space:nowrap;padding:0 28px;font-size:13px;font-weight:600;letter-spacing:.02em}
-.ticker span::after{content:"";display:inline-block;width:5px;height:5px;border-radius:50%;background:var(--paper);margin-left:28px;vertical-align:middle;opacity:.7}
+.ticker span::after{content:"";display:inline-block;width:7px;height:7px;background:var(--paper);margin-left:28px;vertical-align:middle}
 @keyframes slide{to{transform:translateX(-50%)}}
 @media (prefers-reduced-motion:reduce){.ticker .run{animation:none}}
 
@@ -65,7 +66,7 @@ img,svg{display:block}
 .lockup .pony{width:25%;flex:none}
 .lockup .word{width:72.6%;min-width:0}
 .hero .row{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:32px;align-items:end;margin-top:clamp(40px,6vw,88px)}
-.hero h1{margin:0;font-size:clamp(38px,6.2vw,84px);line-height:.98;letter-spacing:-.035em;font-weight:700;font-variation-settings:"wdth" 112;text-wrap:balance;max-width:14ch}
+.hero h1{margin:0;font-size:clamp(38px,6.2vw,84px);line-height:.98;letter-spacing:-.035em;font-weight:700;font-family:var(--display);text-wrap:balance;max-width:14ch}
 .hero .side{display:grid;gap:18px;padding-bottom:6px}
 .hero .side p{margin:0;font-size:clamp(17px,1.5vw,20px);line-height:1.45;max-width:36ch}
 .hero .side .cta{display:flex;gap:10px;flex-wrap:wrap}
@@ -96,11 +97,11 @@ img,svg{display:block}
 
 /* what we do */
 .about{margin-top:clamp(64px,9vw,128px);display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:40px;align-items:start}
-.about h2{margin:0;font-size:clamp(30px,4vw,52px);line-height:1.02;letter-spacing:-.03em;font-weight:700;font-variation-settings:"wdth" 112;text-wrap:balance}
+.about h2{margin:0;font-size:clamp(30px,4vw,52px);line-height:1.02;letter-spacing:-.03em;font-weight:700;font-family:var(--display);text-wrap:balance}
 .about .cols{display:grid;gap:0}
 .about .col{padding:22px 0;border-top:1px solid var(--ink)}
 .about .col:last-child{border-bottom:1px solid var(--ink)}
-.about h3{margin:0 0 8px;font-size:clamp(19px,1.8vw,23px);line-height:1.25;font-weight:600;letter-spacing:-.02em}
+.about h3{margin:0 0 8px;font-size:clamp(19px,1.8vw,23px);line-height:1.25;font-weight:700;letter-spacing:-.02em;font-family:var(--display)}
 .about p{margin:0;color:var(--mute);font-size:16px;line-height:1.5;max-width:52ch}
 
 /* clients */
@@ -112,7 +113,7 @@ img,svg{display:block}
 
 /* contact */
 .contact{margin-top:clamp(72px,10vw,140px);display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:32px;align-items:end}
-.contact h2{margin:0;font-size:clamp(40px,7vw,100px);line-height:.95;letter-spacing:-.04em;font-weight:700;font-variation-settings:"wdth" 112;max-width:12ch}
+.contact h2{margin:0;font-size:clamp(40px,7vw,100px);line-height:.95;letter-spacing:-.04em;font-weight:700;font-family:var(--display);max-width:12ch}
 .contact .side{display:grid;gap:18px;padding-bottom:8px}
 .contact .side p{margin:0;font-size:clamp(17px,1.5vw,20px)}
 .contact .cta{display:flex;gap:10px;flex-wrap:wrap}
